@@ -2,6 +2,7 @@ const numButtons = document.querySelectorAll('.button-number');
 const opButtons = document.querySelectorAll('.button-operator');
 
 let stringNumber = "";
+let currentOperator = "";
 let userNumber = 0;
 let answerNumber = 0;
 
@@ -16,7 +17,12 @@ opButtons.forEach((button) => {
     button.addEventListener('click', () => {
         userNumber = parseInt(stringNumber);
         stringNumber = "";
-        console.log(userNumber);
+        if (currentOperator != "") {
+            console.log(currentOperator)
+        } else {
+            currentOperator = button.innerText;
+            console.log(currentOperator);
+        }
     });
 });
 
