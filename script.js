@@ -1,8 +1,8 @@
-const buttons = document.querySelectorAll('.button');
+const numButtons = document.querySelectorAll('.button-number');
 
 let currentNumber = ""
 
-buttons.forEach((button) => {
+numButtons.forEach((button) => {
     button.addEventListener('click', () => {
         currentNumber = currentNumber + button.innerText;
         console.log(currentNumber);
