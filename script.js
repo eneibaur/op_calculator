@@ -1,10 +1,11 @@
 const buttons = document.querySelectorAll('.button');
 
-const currentNumber = ""
+let currentNumber = ""
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        console.log(button.innerText);
+        currentNumber = currentNumber + button.innerText;
+        console.log(currentNumber);
     });
 });
 
