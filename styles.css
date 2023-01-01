@@ -19,6 +19,7 @@ div {
 .button {
     display: flex;
     box-sizing: border-box;
+    border-radius: 10px;
     width: 150px;
     height: 150px;
     background-color: aliceblue;
@@ -27,6 +28,11 @@ div {
     font-size: 5rem;
     margin: 5px;
 }
+
+.button:active {
+    background-color: rgb(25, 25, 25);
+    color: aliceblue;
+  }
 
 .zero {
     width: 470px;
