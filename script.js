@@ -1,4 +1,5 @@
 const numButtons = document.querySelectorAll('.button-number');
+const opButtons = document.querySelector('.button-operator');
 
 let currentNumber = ""
 
