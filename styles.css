@@ -3,7 +3,16 @@ div {
     padding: 3px;
 }
 
+.calculator {
+    margin: 10%;
+    max-width: 650px;
+}
+
 .row {
+    display: flex;
+}
+
+.calculator-top {
     display: flex;
 }
 
@@ -16,4 +25,10 @@ div {
     justify-content: center;
     align-items: center;
     font-size: 5rem;
+    margin: 5px;
+}
+
+.zero {
+    width: 470px;
+    margin-right: 5px;
 }
