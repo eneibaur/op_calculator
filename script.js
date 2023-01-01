@@ -1,5 +1,5 @@
 const numButtons = document.querySelectorAll('.button-number');
-const opButtons = document.querySelector('.button-operator');
+const opButtons = document.querySelectorAll('.button-operator');
 
 let stringNumber = "";
 let userNumber = 0;
@@ -11,12 +11,12 @@ numButtons.forEach((button) => {
     });
 });
 
-// operatorButtons.forEach((button) => {
-//     button.addEventListener('click', () => {
-//         userNumber = parseInt(currentNumber);
-//         console.log(userNumber);
-//     });
-// });
+opButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        userNumber = parseInt(stringNumber);
+        console.log(userNumber);
+    });
+});
 
 
 // add event listener to numbers buttons
