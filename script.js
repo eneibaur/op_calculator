@@ -15,6 +15,7 @@ numButtons.forEach((button) => {
 opButtons.forEach((button) => {
     button.addEventListener('click', () => {
         userNumber = parseInt(stringNumber);
+        stringNumber = "";
         console.log(userNumber);
     });
 });
