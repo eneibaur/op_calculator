@@ -16,13 +16,14 @@ numButtons.forEach((button) => {
 opButtons.forEach((button) => {
     button.addEventListener('click', () => {
         userNumber = parseInt(stringNumber);
-        stringNumber = "";
         if (currentOperator != "") {
-            console.log(currentOperator)
+            answerNumber = add(userNumber, parseInt(stringNumber));
+            console.log(answerNumber);
         } else {
             currentOperator = button.innerText;
             console.log(currentOperator);
         }
+        stringNumber = "";
     });
 });
 
