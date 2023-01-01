@@ -3,6 +3,7 @@ const opButtons = document.querySelectorAll('.button-operator');
 
 let stringNumber = "";
 let userNumber = 0;
+let answerNumber = 0;
 
 numButtons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -18,6 +19,21 @@ opButtons.forEach((button) => {
     });
 });
 
+function add(a, b) {
+    return a + b;
+}
+
+function subtract(a, b) {
+    return a - b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function divide(a, b) {
+    return a / b;
+}
 
 // add event listener to numbers buttons
 // user types in number, it shows up in input field. when they click on
