@@ -8,21 +8,22 @@ let userNumber = 0;
 numButtons.forEach((button) => {
     button.addEventListener('click', () => {
         stringNumber = stringNumber + button.innerText;
-        console.log(stringNumber);
     });
 });
 
 opButtons.forEach((button) => {
     button.addEventListener('click', () => {
         if (currentOperator != "") {
-            userNumber = divide(userNumber, parseInt(stringNumber));
-            console.log(answerNumber);
+            // Change the active number
+            console.log(userNumber);
+            userNumber = add(userNumber, parseInt(stringNumber));
+            currentOperator = button.innerText;
+            console.log(currentOperator);
+            console.log(userNumber)
         } else {
             userNumber = parseInt(stringNumber);
             currentOperator = button.innerText;
-            console.log(currentOperator);
         }
-
         stringNumber = "";
     });
 });
