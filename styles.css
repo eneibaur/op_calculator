@@ -6,3 +6,14 @@ div {
 .row {
     display: flex;
 }
+
+.button {
+    display: flex;
+    box-sizing: border-box;
+    width: 150px;
+    height: 150px;
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
