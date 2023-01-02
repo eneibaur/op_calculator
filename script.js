@@ -23,11 +23,12 @@ opButtons.forEach((button) => {
     button.addEventListener('click', () => {
         if (currentOperator != "") {
             userNumber = operate(userNumber, parseInt(stringNumber), currentOperator);
+            if (userNumber == "nice try"){
+                clearCalc();
+            } else {
             currentOperator = button.innerText;
             history.value = userNumber + " " + currentOperator;
             activeDisplay.value = userNumber;
-            if (userNumber == "nice try"){
-                userNumber = 0;
             }
         } else {
             userNumber = parseInt(stringNumber);
@@ -60,9 +61,8 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-    if (b ==0) {
+    if (b == 0) {
         return "nice try";
-
     }
     return Math.round((a / b) * 100) / 100;
 }
