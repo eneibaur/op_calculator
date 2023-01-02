@@ -9,11 +9,7 @@ let currentOperator = "";
 let userNumber = 0;
 
 clearButton.addEventListener('click', () => {
-    stringNumber = "";
-    currentOperator = "";
-    userNumber = 0;
-    activeDisplay.value = "";
-    history.value = "";
+    clearCalc();
 });
 
 numButtons.forEach((button) => {
@@ -26,8 +22,6 @@ numButtons.forEach((button) => {
 opButtons.forEach((button) => {
     button.addEventListener('click', () => {
         if (currentOperator != "") {
-            // Change the active number
-            console.log(currentOperator)
             userNumber = operate(userNumber, parseInt(stringNumber), currentOperator);
             currentOperator = button.innerText;
             history.value = userNumber + " " + currentOperator;
@@ -50,7 +44,7 @@ function operate (num1, num2, operator) {
     : (operator == "×") ? multiply(num1, num2)
     : (operator == "÷") ? divide(num1, num2)
     : (operator == "=") ? userNumber
-    : "error"
+    : "ERROR"
 };
 
 function add(a, b) {
@@ -67,12 +61,18 @@ function multiply(a, b) {
 
 function divide(a, b) {
     if (b ==0) {
-        stringNumber = "0";
-        currentOperator = "";
         return "nice try";
 
     }
     return Math.round((a / b) * 100) / 100;
+}
+
+function clearCalc () {
+    stringNumber = "";
+    currentOperator = "";
+    userNumber = 0;
+    activeDisplay.value = "";
+    history.value = "";
 }
 
 // add event listener to numbers buttons
