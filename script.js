@@ -42,7 +42,8 @@ function operate (num1, num2, operator) {
     : (operator == "-") ? subtract(num1, num2)
     : (operator == "×") ? multiply(num1, num2)
     : (operator == "÷") ? divide(num1, num2)
-    : "error";
+    : (operator == "=") ? userNumber
+    : "error"
 };
 
 function add(a, b) {
@@ -58,6 +59,13 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
+    if (b ==0) {
+        stringNumber = "";
+        currentOperator = "";
+        userNumber = 0;
+        return "nice try";
+
+    }
     return a / b;
 }
 
