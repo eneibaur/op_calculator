@@ -2,6 +2,7 @@ const numButtons = document.querySelectorAll('.button-number');
 const opButtons = document.querySelectorAll('.button-operator');
 const activeDisplay = document.querySelector(".calculation");
 const clearButton = document.querySelector(".clear");
+const history = document.querySelector(".current");
 
 let stringNumber = "";
 let currentOperator = "";
@@ -12,6 +13,7 @@ clearButton.addEventListener('click', () => {
     currentOperator = "";
     userNumber = 0;
     activeDisplay.value = "";
+    history.value = "";
 });
 
 numButtons.forEach((button) => {
@@ -28,10 +30,12 @@ opButtons.forEach((button) => {
             console.log(currentOperator)
             userNumber = operate(userNumber, parseInt(stringNumber), currentOperator);
             currentOperator = button.innerText;
+            history.value = userNumber + " " + currentOperator;
             activeDisplay.value = userNumber;
         } else {
             userNumber = parseInt(stringNumber);
             currentOperator = button.innerText;
+            history.value = userNumber + " " + currentOperator;
         }
         stringNumber = "";
     });
