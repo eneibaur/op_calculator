@@ -21,7 +21,8 @@ div {
     border: none;
     margin-right: 1rem;
     text-align: right;
-    font-size: ;
+    font-size: 15px;
+    font-size: 1rem;
 }
 
 input {
