@@ -32,6 +32,9 @@ opButtons.forEach((button) => {
             currentOperator = button.innerText;
             history.value = userNumber + " " + currentOperator;
             activeDisplay.value = userNumber;
+            if (userNumber == "nice try"){
+                userNumber = 0;
+            }
         } else {
             userNumber = parseInt(stringNumber);
             currentOperator = button.innerText;
@@ -64,13 +67,12 @@ function multiply(a, b) {
 
 function divide(a, b) {
     if (b ==0) {
-        stringNumber = "";
+        stringNumber = "0";
         currentOperator = "";
-        userNumber = 0;
         return "nice try";
 
     }
-    return a / b;
+    return Math.round((a / b) * 100) / 100;
 }
 
 // add event listener to numbers buttons
