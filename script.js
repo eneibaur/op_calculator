@@ -1,6 +1,6 @@
 const numButtons = document.querySelectorAll('.button-number');
 const opButtons = document.querySelectorAll('.button-operator');
-const activeDisplay = document.querySelector(".calculator");
+const activeDisplay = document.querySelector(".calculation");
 
 let stringNumber = "";
 let currentOperator = "";
@@ -9,6 +9,7 @@ let userNumber = 0;
 numButtons.forEach((button) => {
     button.addEventListener('click', () => {
         stringNumber = stringNumber + button.innerText;
+        activeDisplay.value = stringNumber;
     });
 });
 
