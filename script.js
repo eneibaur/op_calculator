@@ -1,5 +1,6 @@
 const numButtons = document.querySelectorAll('.button-number');
 const opButtons = document.querySelectorAll('.button-operator');
+const activeDisplay = document.querySelector(".calculator");
 
 let stringNumber = "";
 let currentOperator = "";
