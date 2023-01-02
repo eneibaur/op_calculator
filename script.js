@@ -17,12 +17,9 @@ opButtons.forEach((button) => {
     button.addEventListener('click', () => {
         if (currentOperator != "") {
             // Change the active number
-            console.log(userNumber);
-            console.log(currentOperator);
-            console.log(stringNumber)
             userNumber = operate(userNumber, parseInt(stringNumber), currentOperator);
             currentOperator = button.innerText;
-            console.log(userNumber)
+            activeDisplay.value = userNumber;
         } else {
             userNumber = parseInt(stringNumber);
             currentOperator = button.innerText;
