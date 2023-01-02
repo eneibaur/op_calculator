@@ -5,7 +5,7 @@ div {
 
 .calculator {
     margin: 10%;
-    max-width: 650px;
+    max-width: 600px;
 }
 
 .row {
@@ -18,15 +18,16 @@ div {
 }
 
 input {
-    width: 470px;
+    flex: 3 1 auto;
 }
 
 .button-number, .button-operator {
     display: flex;
+    flex: 1 1 auto;
     box-sizing: border-box;
     border-radius: 10px;
-    width: 150px;
-    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
     background-color: aliceblue;
     justify-content: center;
     align-items: center;
@@ -40,6 +41,6 @@ input {
   }
 
 .zero {
-    width: 470px;
-    margin-right: 5px;
+    flex: 3 1 auto;
+    max-width: none;
 }
