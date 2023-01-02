@@ -18,9 +18,10 @@ opButtons.forEach((button) => {
         if (currentOperator != "") {
             // Change the active number
             console.log(userNumber);
-            userNumber = add(userNumber, parseInt(stringNumber));
-            currentOperator = button.innerText;
             console.log(currentOperator);
+            console.log(stringNumber)
+            userNumber = operate(userNumber, parseInt(stringNumber), currentOperator);
+            currentOperator = button.innerText;
             console.log(userNumber)
         } else {
             userNumber = parseInt(stringNumber);
@@ -29,6 +30,14 @@ opButtons.forEach((button) => {
         stringNumber = "";
     });
 });
+
+function operate (num1, num2, operator) {
+    return (operator == "+") ? add(num1, num2) 
+    : (operator == "-") ? subtract(num1, num2)
+    : (operator == "×") ? multiply(num1, num2)
+    : (operator == "÷") ? divide(num1, num2)
+    : "error";
+};
 
 function add(a, b) {
     return a + b;
