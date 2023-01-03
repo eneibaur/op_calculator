@@ -7,5 +7,5 @@ CURRENT FEATURES WORKING LIST:
 - Move and Style top input line (COMPLETE)
 - Calculation panel creates current calculation as string (COMPLETE)
 - Add support for ".", allowing users to create floating numbers
-- Add support for "backspace" button
+- Add support for "backspace" button (COMPLETE)
 - Clean up CSS

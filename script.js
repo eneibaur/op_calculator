@@ -4,6 +4,7 @@ const activeDisplay = document.querySelector(".calculation");
 const clearButton = document.querySelector(".clear");
 const history = document.querySelector(".current");
 const backspace = document.querySelector(".backspace");
+const float = document.querySelector(".float");
 
 let stringNumber = "";
 let currentOperator = "";
