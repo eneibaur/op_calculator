@@ -19,12 +19,13 @@ backspace.addEventListener('click', () => {
     updateDisplay();
 });
 
-float.addEventListener('click', () =>{
-    if ((stringNumber.replace(/[0-9]/g), "").length >= 1) {
-        stringNumber = stringNumber;
-    } else {
+float.addEventListener('click', () => {
+    if ((stringNumber.replace(/[0-9]/g, "")).length < 1) {
+        console.log((stringNumber.replace(/[0-9]/g, "")).length)
         stringNumber = stringNumber + ".";
         updateDisplay();
+    } else {
+        stringNumber = stringNumber;
     }
 });
 
