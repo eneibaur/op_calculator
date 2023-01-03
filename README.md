@@ -8,4 +8,4 @@ CURRENT FEATURES WORKING LIST:
 - Calculation panel creates current calculation as string (COMPLETE)
 - Add support for ".", allowing users to create floating numbers (COMPLETE)
 - Add support for "backspace" button (COMPLETE)
-- Clean up CSS
+- Clean up CSS (COMPLETE)
