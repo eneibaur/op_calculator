@@ -13,6 +13,10 @@ clearButton.addEventListener('click', () => {
     clearCalc();
 });
 
+backspace.addEventListener('click', () => {
+    
+})
+
 numButtons.forEach((button) => {
     button.addEventListener('click', () => {
         stringNumber = stringNumber + button.innerText;
