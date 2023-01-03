@@ -44,7 +44,7 @@ opButtons.forEach((button) => {
             } else {
             currentOperator = button.innerText;
             history.value = userNumber + " " + currentOperator;
-            updateDisplay()
+            activeDisplay.value = userNumber;
             }
         } else {
             userNumber = parseFloat(stringNumber);
