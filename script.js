@@ -17,7 +17,15 @@ clearButton.addEventListener('click', () => {
 backspace.addEventListener('click', () => {
     stringNumber = stringNumber.slice(0, -1);
     activeDisplay.value = stringNumber;
-})
+});
+
+float.addEventListener('click', () =>{
+    if ((stringNumber.replace(/[.]/g), "").length > 1) {
+        stringNumber = stringNumber
+    } else {
+        stringNumber = stringNumber + ".";
+    }
+});
 
 numButtons.forEach((button) => {
     button.addEventListener('click', () => {
