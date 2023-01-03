@@ -18,15 +18,16 @@ div {
     display: flex;
 }
 
-.calculator-top, .runningcalc {
+.calculator-top {
     display: flex;
-    justify-content: flex-end;
 }
 
 input {
-    flex: 3 1 0;
+    box-sizing: border-box;
+    flex: 1 1 0;
     border: none;
     min-height: 2rem;
+    width: 100%;
     padding-right: 2rem;
     text-align: right;
     background-color: rgb(34, 34, 34);
@@ -35,7 +36,7 @@ input {
 }
 
 .calculation {
-    font-size: large;
+    font-size: 48px;
 }
 
 .button-number, .button-operator, .button {
