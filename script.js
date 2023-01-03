@@ -20,8 +20,8 @@ backspace.addEventListener('click', () => {
 });
 
 float.addEventListener('click', () =>{
-    if ((stringNumber.replace(/[^.]/g), "").length >= 1) {
-        stringNumber = stringNumber
+    if ((stringNumber.replace(/[0-9]/g), "").length >= 1) {
+        stringNumber = stringNumber;
     } else {
         stringNumber = stringNumber + ".";
         updateDisplay();
