@@ -21,7 +21,6 @@ backspace.addEventListener('click', () => {
 
 float.addEventListener('click', () => {
     if ((stringNumber.replace(/[0-9]/g, "")).length < 1) {
-        console.log((stringNumber.replace(/[0-9]/g, "")).length)
         stringNumber = stringNumber + ".";
         updateDisplay();
     } else {
@@ -39,7 +38,7 @@ numButtons.forEach((button) => {
 opButtons.forEach((button) => {
     button.addEventListener('click', () => {
         if (currentOperator != "") {
-            userNumber = operate(userNumber, parseInt(stringNumber), currentOperator);
+            userNumber = operate(userNumber, parseFloat(stringNumber), currentOperator);
             if (userNumber == "nice try"){
                 clearCalc();
             } else {
@@ -48,7 +47,7 @@ opButtons.forEach((button) => {
             updateDisplay()
             }
         } else {
-            userNumber = parseInt(stringNumber);
+            userNumber = parseFloat(stringNumber);
             currentOperator = button.innerText;
             history.value = userNumber + " " + currentOperator;
         }
