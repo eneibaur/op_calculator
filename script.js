@@ -16,7 +16,7 @@ clearButton.addEventListener('click', () => {
 
 backspace.addEventListener('click', () => {
     stringNumber = stringNumber.slice(0, -1);
-    activeDisplay.value = stringNumber;
+    updateDisplay();
 });
 
 float.addEventListener('click', () =>{
@@ -24,13 +24,14 @@ float.addEventListener('click', () =>{
         stringNumber = stringNumber
     } else {
         stringNumber = stringNumber + ".";
+        updateDisplay();
     }
 });
 
 numButtons.forEach((button) => {
     button.addEventListener('click', () => {
         stringNumber = stringNumber + button.innerText;
-        activeDisplay.value = stringNumber;
+        updateDisplay();
     });
 });
 
@@ -43,7 +44,7 @@ opButtons.forEach((button) => {
             } else {
             currentOperator = button.innerText;
             history.value = userNumber + " " + currentOperator;
-            activeDisplay.value = userNumber;
+            updateDisplay()
             }
         } else {
             userNumber = parseInt(stringNumber);
