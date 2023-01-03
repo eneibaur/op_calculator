@@ -3,6 +3,7 @@ const opButtons = document.querySelectorAll('.button-operator');
 const activeDisplay = document.querySelector(".calculation");
 const clearButton = document.querySelector(".clear");
 const history = document.querySelector(".current");
+const backspace = document.querySelector(".backspace");
 
 let stringNumber = "";
 let currentOperator = "";
