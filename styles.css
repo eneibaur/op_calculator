@@ -44,7 +44,7 @@ input {
     margin: 5px;
 }
 
-.button-number:active, .button-operator:active {
+.button-number:active, .button-operator:active, .button:active {
     background-color: rgb(25, 25, 25);
     color: aliceblue;
   }
