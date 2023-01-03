@@ -20,7 +20,7 @@ backspace.addEventListener('click', () => {
 });
 
 float.addEventListener('click', () =>{
-    if ((stringNumber.replace(/[.]/g), "").length > 1) {
+    if ((stringNumber.replace(/[^.]/g), "").length >= 1) {
         stringNumber = stringNumber
     } else {
         stringNumber = stringNumber + ".";
@@ -53,6 +53,10 @@ opButtons.forEach((button) => {
         stringNumber = "";
     });
 });
+
+function updateDisplay() {
+    activeDisplay.value = stringNumber
+};
 
 function operate (num1, num2, operator) {
     return (operator == "+") ? add(num1, num2) 
